@@ -19,11 +19,22 @@
         .container {
             text-align: center;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        picture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
         img {
             max-width: 100%;
             height: auto;
-            max-height: 85vh;
+            max-height: 90vh;
             border-radius: 16px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -36,7 +47,10 @@
 </head>
 <body>
     <div class="container">
-        <img src="assets/ece_under_construction.jpg" alt="ECE Department - Under Construction">
+        <picture>
+            <source media="(max-width: 768px)" srcset="assets/ece_under_construction_mobile.jpg">
+            <img src="assets/ece_under_construction_desktop.jpg" alt="ECE Department - Under Construction">
+        </picture>
     </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 // -------------------------------------------------------------
-// SLICE 2026 Symposium JavaScript Code
+// SLICE v26 Symposium JavaScript Code
 // Features: Countdown, Dynamic Cards, Modals, Filters, Navigation
 // -------------------------------------------------------------
 
@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 3. COUNTDOWN TIMER
-    // Target Date: October 15, 2026 at 9:00 AM
-    const targetDate = new Date("Oct 15, 2026 09:00:00").getTime();
+    // Target Date: August 22, 2026 at 9:00 AM
+    const targetDate = new Date("Aug 22, 2026 09:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -74,119 +74,128 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial trigger
 
-    // 4. EVENTS & WORKSHOPS DATA
+    // 4. EVENTS & WORKSHOPS DATA FROM PREVIOUS YEAR
     const events = [
         {
             id: "coding",
-            title: "Coding Quest",
+            title: "Code-X",
             category: "technical",
             categoryLabel: "Technical",
             prize: "₹5,000",
-            desc: "Put your programming speed, accuracy, and algorithmic skills to the test. This contest challenges you to solve complex computational problems within a strict time limit.",
-            rules: [
-                "Individual participation only.",
-                "Languages allowed: C, C++, Java, Python.",
-                "Round 1: MCQ Prelims (30 mins) on basics and data structures.",
-                "Round 2: Coding Finals (45 mins) - solve 3 coding problems.",
-                "Use of AI tools, search engines, or mobile phones is strictly prohibited."
-            ],
-            contacts: "Dr. A. Kumar (98765 12345) | S. Rajesh (Student: 87654 32101)"
-        },
-        {
-            id: "webdev",
-            title: "WebCraft",
-            category: "technical",
-            categoryLabel: "Technical",
-            prize: "₹5,000",
-            desc: "Showcase your frontend development chops. Design and build a visually stunning, highly interactive landing page based on a theme revealed on the spot.",
-            rules: [
-                "Team Size: Max 2 members.",
-                "Duration: 2 hours.",
-                "Frameworks allowed: Vanilla HTML/CSS/JS, React, or Tailwind.",
-                "Evaluation Criteria: Design aesthetics, responsiveness, creativity, clean code.",
-                "Assets will be provided; no external templates allowed."
-            ],
-            contacts: "Dr. R. Preethi (98765 23456) | M. Hari (Student: 87654 43210)"
+            desc: "Welcome to CODEX, a high-energy coding showdown where logic, speed, and creativity collide. Step in, solve challenges, and prove you’ve got what it takes to outcode the rest!",
+            flow: "Round 1 – Code Crackers (Prelims): A fast-paced pen-and-paper challenge where you’ll tackle 15 tricky numeric and symbolic programming puzzles in just 30 minutes. Round 2 – Code Sprint (Finals): A high-intensity coding showdown. Solve as many output-based programming tasks as you can in 40 minutes.",
+            coordinators: "Amar NG, Yobin S, TEO ALLEN XAVIER",
+            contacts: "+91 7382306484"
         },
         {
             id: "paper",
-            title: "Paper Pitch",
+            title: "Paper Presentation",
             category: "technical",
             categoryLabel: "Technical",
             prize: "₹6,000",
-            desc: "Present your research papers and innovative projects to a panel of expert judges. Cover domains like Embedded Systems, VLSI, IoT, AI, Signal Processing, and communication networks.",
-            rules: [
-                "Team Size: Max 3 members.",
-                "Presentation time: 8 minutes + 2 minutes Q&A.",
-                "IEEE format must be followed for the paper submission.",
-                "Soft copy of slides must be submitted to coordinators in advance.",
-                "Original projects/hardware models carry extra points."
-            ],
-            contacts: "Dr. P. Sundar (98765 34567) | K. Shruti (Student: 87654 54321)"
+            desc: "Welcome to Paper Presentation, the ultimate platform to showcase your innovative research and project ideas. This event empowers participants to present their academic and technical insights, setting the stage for breakthroughs in technology, science, and engineering.",
+            flow: "Each team will present their paper/project based on prior research, journal, or original work. A maximum of 8 minutes will be allotted per team, including 2 minutes for live Q&A. Judges will evaluate based on specific criteria.",
+            coordinators: "Jenlin Anne, Flora Jayaharini B",
+            contacts: "+91 9486409404, +91 9445543926"
         },
         {
-            id: "gaming",
-            title: "Cyber Gaming",
+            id: "bytebomb",
+            title: "Byte The Bomb",
+            category: "technical",
+            categoryLabel: "Technical",
+            prize: "₹5,000",
+            desc: "60 Minutes. One Bomb. Cut the Right Wire — or Boom.",
+            flow: "Round 1: Build the Digital Dice: Your task is to build a Random Number Generator (RNG) circuit within 45 minutes using standard instructions and support. Round 2: The Circuit Chase: Use your RNG dice to navigate a custom board game, land on hidden trap tiles, solve ECE puzzles to earn defusal clues, and cut the correct wire.",
+            coordinators: "Arun Kumar, Melvin Raphael R, Harish P",
+            contacts: "+91 9487731280"
+        },
+        {
+            id: "cipher",
+            title: "Cipher Odyssey",
+            category: "technical",
+            categoryLabel: "Technical",
+            prize: "₹5,000",
+            desc: "Decode. Dominate. Defy the darkness. A decryption and escape-room style ECE challenge.",
+            flow: "Teams of 3 to 4 are locked in a room with a laptop. Using local CMD commands and text files, teams must solve 3 decoding logic puzzles. On success, an escape phrase is revealed. Winners are decided by timing.",
+            coordinators: "Ram Siddhaarth, Manikandan, Fauzia Diya",
+            contacts: "+91 9361317271"
+        },
+        {
+            id: "astrologiq",
+            title: "Astro Logiq",
+            category: "technical",
+            categoryLabel: "Technical",
+            prize: "₹5,000",
+            desc: "ASTRO LOGIQ is an engaging digital logic maze challenge that tests participants’ ability to trace and solve logic gate sequences.",
+            flow: "Round 1: Signal Uplink (Logic Maze): Navigate through sequential logic gates using binary inputs. Points are awarded for accuracy and speed. Round 2: Orbital Auction: Bidding and purchasing specific gates using team points to build a logic circuit for a given ECE problem statement.",
+            coordinators: "Harini JS, Bala Mani Bharathi A, Jagadeeshwaran M",
+            contacts: "+91 9176334470"
+        },
+        {
+            id: "cosmoconnect",
+            title: "Cosmo-Connect",
+            category: "technical",
+            categoryLabel: "Technical",
+            prize: "₹5,000",
+            desc: "A fun and competitive circuit-building event with a twist — teams must first collect the correct components through enactment-based clues and then race to construct a working circuit.",
+            flow: "Round 1: Charades-based component collection (3 mins limit). Points awarded per correct component gathered. Round 2: Top 6 teams build and simulate a given circuit using P-Spice software.",
+            coordinators: "Mosay Calebian, Archana",
+            contacts: "+91 8807882107, +91 9042098603"
+        },
+        {
+            id: "lunarlaunch",
+            title: "Lunar Launch",
+            category: "technical",
+            categoryLabel: "Technical",
+            prize: "₹6,000",
+            desc: "An exclusive platform for aspiring innovators to pitch their prototypes or ideas, tackle real-world problems, and showcase entrepreneurial thinking.",
+            flow: "Round 1: Idea/Prototype Pitch (8 minutes: 6 mins presentation + 2 mins Q&A). Top 5 teams make it to the finals. Round 2: Business Battle where teams present a marketing strategy, revenue model, and implementation roadmap.",
+            coordinators: "Christina Rajakumari, Geena Evans",
+            contacts: "+91 9884196824"
+        },
+        {
+            id: "stellarquest",
+            title: "Stellar Quest",
+            category: "technical",
+            categoryLabel: "Technical",
+            prize: "₹5,000",
+            desc: "Stellar Quest is a space-themed ECE treasure hunt and pitching challenge testing logical reasoning, coding, and electronics.",
+            flow: "Round 1: Written test on Aptitude, Circuit Theory, and C/Python coding. Round 2: Qualifiers solve clues to find ECE components (Input, Processor, Output) across campus, design an SDG-aligned problem statement, and pitch a solution.",
+            coordinators: "Tabitha Bennett, Dhanya",
+            contacts: "+91 9150232577, +91 8925653833"
+        },
+        {
+            id: "wirewarz",
+            title: "Wire Warz",
+            category: "technical",
+            categoryLabel: "Technical",
+            prize: "₹5,000",
+            desc: "WIREWARZ is designed to test circuit design, analytical skills, teamwork, and communication in a competitive format.",
+            flow: "Round 1: Circuit Design Challenge: Calculate a missing resistor value using electrical concepts and physically build it using provided components. Round 2: A surprise mystery round testing ECE instincts.",
+            coordinators: "Jason Goldwin, Annie Grace Menesa",
+            contacts: "+91 9488902270, +91 8925209481"
+        },
+        {
+            id: "bingonauts",
+            title: "Bingo-Nauts",
             category: "non-technical",
             categoryLabel: "Non-Technical",
             prize: "₹4,000",
-            desc: "Clash against the best squads in a high-octane BGMI (Battlegrounds Mobile India) / Valorant tournament. Bring your team, execute strategies, and dominate the lobby.",
-            rules: [
-                "Team Size: 4 members (Squad).",
-                "Players must bring their own mobile devices / laptops.",
-                "Strict anti-cheat monitoring will be enforced.",
-                "Classic Maps rotation: Erangel and Miramar.",
-                "Organizers decision is final in case of dispute or disconnect."
-            ],
-            contacts: "Mr. J. Daniel (98765 45678) | P. Karthik (Student: 87654 65432)"
-        },
-        {
-            id: "photography",
-            title: "LensCraft",
-            category: "non-technical",
-            categoryLabel: "Non-Technical",
-            prize: "₹3,000",
-            desc: "Capture the essence of SLICE 2026. A photography competition where you must take photos inside the campus matching the specific prompt given on the symposium morning.",
-            rules: [
-                "Individual participation.",
-                "Photos must be taken within the college campus on the event day.",
-                "Camera phones or DSLRs are allowed.",
-                "Basic color correction is permitted; heavy editing or manipulation is disqualifying.",
-                "Submit your top 2 shots by 2:30 PM."
-            ],
-            contacts: "Mrs. G. Vidya (98765 56789) | A. Kavitha (Student: 87654 76543)"
-        },
-        {
-            id: "treasure",
-            title: "Mystery Hunt",
-            category: "non-technical",
-            categoryLabel: "Non-Technical",
-            prize: "₹4,000",
-            desc: "Unravel riddles, decode crypts, and sprint through campus hotspots to find the hidden artifact. Time is of the essence; only the fastest and smartest team will emerge victorious.",
-            rules: [
-                "Team Size: Max 3 members.",
-                "Total Clues: 8 hidden across the campus.",
-                "Using physical force or entering restricted areas is prohibited.",
-                "All members of the team must stay together during the hunt.",
-                "Time limit: 60 minutes."
-            ],
-            contacts: "Mr. S. Vinay (98765 67890) | R. Dinesh (Student: 87654 87654)"
+            desc: "BINGO-NAUTS is a fun-filled technical game event consisting of ECE connection riddles and custom ECE-themed Bingo boards.",
+            flow: "Round 1: Connections: Solve picture connection grids, ECE riddles, and word connect games. Round 2: Bingo: Teams arrange ECE answers on a 5x5 Bingo board, striking them off as questions are solved. First squads to strike Bingo win.",
+            coordinators: "Sarmika Rufux, Reno Joe Clement",
+            contacts: "+91 6382008709"
         },
         {
             id: "aiworkshop",
-            title: "Generative AI & Prompt Engineering",
+            title: "Generative AI Masterclass",
             category: "workshop",
             categoryLabel: "Workshop",
             prize: "Certificate of Mastery",
-            desc: "An intensive, hands-on masterclass led by industry experts. Learn the fundamentals of Large Language Models (LLMs), workflow automation, and how to write production-grade prompts.",
-            rules: [
-                "Open to all students from any stream.",
-                "Bring a fully charged laptop with internet connection.",
-                "Participants will receive certificates signed by industry mentors.",
-                "Duration: 10:30 AM to 03:00 PM (with lunch break).",
-                "Includes free premium API credits for hands-on labs."
-            ],
-            contacts: "Dr. K. Srinivasan (98765 78901) | S. Sneha (Student: 87654 98765)"
+            desc: "An intensive, hands-on workshop led by industry experts. Learn the fundamentals of Large Language Models (LLMs), prompt engineering, and building AI tools.",
+            flow: "Runs from 10:30 AM to 03:00 PM (with lunch break). Participants will receive physical certificates signed by mentors. Includes free API credits for hands-on laboratory work.",
+            coordinators: "Dr. K. Srinivasan, S. Sneha",
+            contacts: "+91 98765 78901, +91 87654 98765"
         }
     ];
 
@@ -194,6 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const eventsGrid = document.getElementById("events-grid");
 
     function renderEvents(filter = "all") {
+        if (!eventsGrid) return;
         eventsGrid.innerHTML = "";
         
         const filteredEvents = filter === "all" 
@@ -262,26 +272,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.category === "workshop") catBadge.classList.add("workshop-badge");
 
         // Prize
-        const prizeSpan = document.querySelector("#modal-prize span");
         if (event.category === "workshop") {
             document.getElementById("modal-prize").innerHTML = `<i class="fa-solid fa-award"></i> Certificate: <span>${event.prize}</span>`;
         } else {
             document.getElementById("modal-prize").innerHTML = `<i class="fa-solid fa-trophy"></i> Cash Prize: <span>${event.prize}</span>`;
         }
 
-        // Desc
+        // Desc, Flow, Coordinators, Contacts
         document.getElementById("modal-desc").innerText = event.desc;
-        
-        // Rules List
-        const rulesList = document.getElementById("modal-rules");
-        rulesList.innerHTML = "";
-        event.rules.forEach(rule => {
-            const li = document.createElement("li");
-            li.innerText = rule;
-            rulesList.appendChild(li);
-        });
-
-        // Contact
+        document.getElementById("modal-rules").innerText = event.flow;
+        document.getElementById("modal-coordinators").innerText = event.coordinators;
         document.getElementById("modal-contacts").innerText = event.contacts;
 
         // Open modal with animation

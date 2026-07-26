@@ -24,8 +24,6 @@
 }
 
 body {
-    background: radial-gradient(circle, var(--bg-cream) 60%, var(--bg-sepia) 100%);
-    background-size: cover;
     color: var(--ink);
     font-family: var(--font-body);
     /* Custom background grid pattern representing blueprint lines */

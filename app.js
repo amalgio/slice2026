@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 navLinks.style.top = "100%";
                 navLinks.style.left = "0";
                 navLinks.style.width = "100%";
-                navLinks.style.background = "rgba(11, 15, 25, 0.95)";
+                navLinks.style.background = "var(--bg-cream)";
                 navLinks.style.padding = "20px";
-                navLinks.style.borderBottom = "1px solid rgba(0, 242, 254, 0.1)";
+                navLinks.style.borderBottom = "3px double var(--ink)";
                 mobileToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
             }
         });
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const difference = targetDate - now;
 
         if (difference <= 0) {
-            document.querySelector(".countdown-wrapper").innerHTML = "<h3 style='color: var(--primary); font-size: 1.8rem; margin: 20px 0;'>The Symposium has Started!</h3>";
+            document.querySelector(".countdown-wrapper").innerHTML = "<h3 style='color: var(--copper); font-size: 1.8rem; margin: 20px 0;'>The Symposium has Started!</h3>";
             return;
         }
 

@@ -703,7 +703,7 @@
   display: block;
   text-align: center;
   width: 100%;
-  margin: -145px auto 0;
+  margin: -195px auto 0;
   position: relative;
   z-index: 2;
 }
@@ -1804,7 +1804,7 @@
     text-align: center;
   }
   .hero-details-wrap {
-    margin: -75px auto 0;
+    margin: -110px auto 0;
   }
 }
 

@@ -6,9 +6,10 @@ import heroTitle from './assets/hero_title.png';
 import wordmarkLogo from './assets/wordmark.png';
 import scriptLeft from './assets/script_left.png';
 import scriptRight from './assets/script_right.png';
-import aboutPcb from './assets/about_pcb.jpg';
+import aboutPcb from './assets/about_pcb.png';
 import blueprintSide from './assets/blueprint_side.png';
 import heroDetails from './assets/hero_details.png';
+import contactRibbon from './assets/contact_ribbon.png';
 
 // ============================================================================
 // 1. Data Definitions & Configuration
@@ -196,27 +197,6 @@ const faqs = [
     a: "Students currently enrolled in any recognised engineering or science programme are welcome. Please carry a valid college ID card for verification at the registration desk."
   }
 ];
-
-const filterCategories = [
-  { key: "all", label: "All" },
-  { key: "technical", label: "Technical" },
-  { key: "nontechnical", label: "Non-Technical" },
-  { key: "workshop", label: "Workshop" }
-];
-
-const categoryLabels = {
-  technical: "Technical",
-  nontechnical: "Non-Technical",
-  workshop: "Workshop"
-};
-
-const totalPrizePool = events.reduce((sum, item) => sum + (item.prizeValue || 0), 0);
-
-const categoryCounts = {
-  technical: events.filter(e => e.category === "technical").length,
-  nontechnical: events.filter(e => e.category === "nontechnical").length,
-  workshop: events.filter(e => e.category === "workshop").length
-};
 
 const navigationLinks = [
   { href: "#top", label: "Home" },
@@ -1121,30 +1101,22 @@ function AboutBlock() {
         <WatermarkGears />
       </div>
       <div className="wrap">
-        <PaperStack className="about-paper about rv" sheets={[{ variant: "b", tilt: -0.3, dx: -8, dy: 6 }, { variant: "c", tilt: 0.3, dx: 8, dy: -6 }]}>
-          <PaperCard variant="w" tilt={-0.3}>
-            <div className="about-grid">
-              <div>
-                <h2 className="script">About {config.eventName}</h2>
-                <p className="lead">
-                  {config.eventName} {config.eventEdition} is the annual technical symposium of the {config.department} at LICET — a day where soldering irons, compilers and slightly unhinged ideas share the same table.
-                </p>
-                <p>
-                  This edition runs {events.length} events in all: {categoryCounts.technical} technical contests spanning coding, circuit design, cryptography and startup pitching, a non-technical event for the pure fun of it, and a hands-on Generative AI masterclass. Whether you build hardware, write software, or simply enjoy solving a good puzzle under time pressure, there is something here with your name on it.
-                </p>
-                <p style={{ marginBottom: 26 }}>
-                  Teams travel in from colleges across the region. Bring your ID card, bring a teammate, and bring the willingness to be wrong quickly.
-                </p>
-                <a className="btn-img-wrap" href={config.registerUrl} target="_blank" rel="noreferrer">
-                  <img src={registerBtn} alt="Register Now" className="reg-btn-body" />
-                </a>
-              </div>
-              <div className="about-art">
-                <img src={aboutPcb} alt="Steampunk Oscilloscope Sketch" className="about-pcb-img" />
-              </div>
+        <PaperCard variant="a" className="about-paper about rv">
+          <div className="about-grid">
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+              <h2 className="script" style={{ marginBottom: 18 }}>About Slice'26</h2>
+              <p style={{ fontSize: 16.5, lineHeight: 1.6, marginBottom: 20 }}>
+                SLICE'26 is the signature technical symposium of the Department of Electronics & Communication Engineering, a platform that brings together innovation, knowledge and creativity. Join us to explore, compete and be inspired in the ever-evolving world of technology.
+              </p>
+              <a className="btn-img-wrap" href={config.registerUrl} target="_blank" rel="noreferrer">
+                <img src={registerBtn} alt="Register Now" className="reg-btn-body" style={{ width: 180 }} />
+              </a>
             </div>
-          </PaperCard>
-        </PaperStack>
+            <div className="about-art">
+              <img src={aboutPcb} alt="Steampunk Oscilloscope Sketch" className="about-pcb-img" />
+            </div>
+          </div>
+        </PaperCard>
       </div>
     </section>
   );
@@ -1176,9 +1148,6 @@ function EventDetailModal({ event, onClose }) {
             <EceIcon name={event.icon} size={42} />
           </div>
           <h3>{event.name}</h3>
-          <div className="smallcaps" style={{ marginTop: 8, fontSize: 10.5 }}>
-            {categoryLabels[event.category]}
-          </div>
         </div>
         <p className="modal-desc">{event.description}</p>
         <div className="blk">
@@ -1225,21 +1194,7 @@ function EventDetailModal({ event, onClose }) {
 }
 
 function EventsCatalogBlock() {
-  const [activeCategory, setActiveCategory] = useState("all");
   const [modalEvent, setModalEvent] = useState(null);
-
-  const categoryTotalCounts = useMemo(() => {
-    const counts = { all: events.length };
-    events.forEach((e) => {
-      counts[e.category] = (counts[e.category] || 0) + 1;
-    });
-    return counts;
-  }, []);
-
-  const filteredEventsList = useMemo(() => {
-    return activeCategory === "all" ? events : events.filter((e) => e.category === activeCategory);
-  }, [activeCategory]);
-
   const cardsTilts = ["a", "b", "c"];
 
   return (
@@ -1249,16 +1204,8 @@ function EventsCatalogBlock() {
       </div>
       <div className="wrap">
         <SectionHeader>Our Events</SectionHeader>
-        <div className="filters rv">
-          {filterCategories.map((cat) => (
-            <button key={cat.key} className={`filter ${activeCategory === cat.key ? "on" : ""}`} onClick={() => setActiveCategory(cat.key)}>
-              {cat.label}
-              <em>{categoryTotalCounts[cat.key] || 0}</em>
-            </button>
-          ))}
-        </div>
         <div className="ev-grid rv">
-          {filteredEventsList.map((item, idx) => (
+          {events.map((item, idx) => (
             <PaperCard
               key={item.id}
               as="button"
@@ -1270,8 +1217,8 @@ function EventsCatalogBlock() {
               <CornerStamp className="tl" />
               <CornerStamp className="br" />
               <EceIcon name={item.icon} size={36} />
-              <div className="tag">{categoryLabels[item.category]}</div>
               <h3>{item.name}</h3>
+              <span className="ev-more">Read More →</span>
             </PaperCard>
           ))}
         </div>
@@ -1312,9 +1259,35 @@ function FaqBlock() {
   );
 }
 
+function ContactBlock() {
+  return (
+    <section className="sec" id="contact" style={{ paddingBottom: 40, paddingTop: 10 }}>
+      <div className="wrap">
+        <SectionHeader>Contact Us</SectionHeader>
+        <div className="contact-ribbon-container">
+          <div className="contact-ribbon-inner">
+            <p className="script contact-ribbon-title">For queries, reach out to our Student Coordinators</p>
+            <div className="contact-ribbon-links">
+              <div className="contact-ribbon-item">
+                <span className="contact-label">Shwithin:</span>
+                <a href="tel:+919500128440" className="contact-value">+91 95001 28440</a>
+              </div>
+              <div className="contact-ribbon-divider" aria-hidden="true">|</div>
+              <div className="contact-ribbon-item">
+                <span className="contact-label">Sathesh:</span>
+                <a href="tel:+919345451604" className="contact-value">+91 93454 51604</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FooterBlock() {
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer">
       <div className="campus" aria-hidden="true">
         <CampusPlate />
       </div>
@@ -1407,6 +1380,8 @@ export default function App() {
         <EventsCatalogBlock />
         <div className="dot-rule" aria-hidden="true" />
         <FaqBlock />
+        <div className="dot-rule" aria-hidden="true" />
+        <ContactBlock />
         <FooterBlock />
       </div>
     </div>

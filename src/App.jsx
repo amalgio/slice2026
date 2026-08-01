@@ -178,7 +178,7 @@ const events = [
 const faqs = [
   {
     q: "Is lunch provided?",
-    a: "Yes. Lunch is provided to all registered participants on the day of the symposium. Please carry your registration confirmation to collect your pass."
+    a: "No, lunch is not provided by the organizers. However, food stalls and the college canteen will be available on campus for participants."
   },
   {
     q: "Is spot registration available?",

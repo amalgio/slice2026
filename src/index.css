@@ -703,7 +703,7 @@
   display: block;
   text-align: center;
   width: 100%;
-  margin: -90px auto 0;
+  margin: -145px auto 0;
   position: relative;
   z-index: 2;
 }
@@ -1802,6 +1802,9 @@
   .footer-in {
     flex-direction: column;
     text-align: center;
+  }
+  .hero-details-wrap {
+    margin: -75px auto 0;
   }
 }
 

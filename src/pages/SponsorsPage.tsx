@@ -1,12 +1,12 @@
 import React from 'react';
 import { SPONSORS_DATA } from '../data/sponsorsData';
-import { Award, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
+import { Award, ExternalLink, Mail, Phone } from 'lucide-react';
 
 export const SponsorsPage: React.FC = () => {
   const proudSponsors = SPONSORS_DATA.filter(s => s.tier === 'Proud Sponsor');
 
   return (
-    <div className="relative z-10 pt-28 pb-16 space-y-16 max-w-5xl mx-auto px-4">
+    <div className="relative z-10 pt-28 pb-16 space-y-16 max-w-6xl mx-auto px-4">
       
       {/* Page Header */}
       <div className="text-center space-y-3">
@@ -34,50 +34,52 @@ export const SponsorsPage: React.FC = () => {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {proudSponsors.map((sponsor) => (
-            <div key={sponsor.id} className="parchment-card p-6 sm:p-8 flex flex-col items-center text-center space-y-6 shadow-2xl">
-              
-              {/* Sponsor Banner Image */}
-              <a 
-                href={sponsor.websiteUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full max-w-2xl bg-[#F4E8C1] border-2 border-[#C5A059] rounded-lg p-2 overflow-hidden shadow-inner group cursor-pointer transition-transform hover:scale-[1.01]"
-              >
-                <img 
-                  src={sponsor.logoUrl} 
-                  alt={sponsor.name}
-                  className="w-full h-auto object-contain rounded"
-                />
-              </a>
+            <div key={sponsor.id} className="parchment-card p-6 flex flex-col justify-between space-y-4 shadow-xl">
+              <div className="space-y-4">
+                {/* Sponsor Logo / Banner */}
+                <a 
+                  href={sponsor.websiteUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block h-44 bg-[#F4E8C1] border-2 border-[#C5A059]/60 rounded-lg p-3 overflow-hidden shadow-inner group cursor-pointer transition-transform hover:scale-[1.01]"
+                >
+                  <img 
+                    src={sponsor.logoUrl} 
+                    alt={sponsor.name}
+                    className="w-full h-full object-contain rounded"
+                  />
+                </a>
 
-              {/* Sponsor Info */}
-              <div className="space-y-3 max-w-xl">
-                <div className="flex items-center justify-center space-x-3">
-                  <h3 className="font-cinzel text-2xl font-bold text-[#1E120B]">{sponsor.name}</h3>
-                  <span className="bg-[#1E120B] text-[#D4AF37] border border-[#C5A059] text-xs font-special uppercase px-2.5 py-0.5 rounded">
-                    {sponsor.tier}
-                  </span>
+                {/* Sponsor Info */}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-cinzel text-xl font-bold text-[#1E120B]">{sponsor.name}</h3>
+                    <span className="bg-[#1E120B] text-[#D4AF37] border border-[#C5A059] text-[10px] font-special uppercase px-2 py-0.5 rounded whitespace-nowrap">
+                      {sponsor.tier}
+                    </span>
+                  </div>
+
+                  <p className="font-eb text-sm text-[#3B2314] leading-relaxed">
+                    {sponsor.description}
+                  </p>
                 </div>
+              </div>
 
-                <p className="font-eb text-base text-[#3B2314] leading-relaxed">
-                  {sponsor.description}
-                </p>
-
+              {sponsor.websiteUrl && (
                 <div className="pt-2">
                   <a 
                     href={sponsor.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-walnut px-6 py-3 text-xs rounded uppercase inline-flex items-center space-x-2 shadow-lg"
+                    className="btn-walnut px-4 py-2 text-xs rounded uppercase inline-flex items-center space-x-2 shadow"
                   >
-                    <span>Visit Official Website</span>
-                    <ExternalLink className="w-4 h-4 text-[#D4AF37]" />
+                    <span>Visit Website</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[#D4AF37]" />
                   </a>
                 </div>
-              </div>
-
+              )}
             </div>
           ))}
         </div>

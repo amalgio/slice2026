@@ -34,11 +34,12 @@ The department provides an ecosystem for the students to achieve academic excell
       linkUrl: 'https://licet.ac.in/electronics-and-communication-engineering/electronics-and-communication-engineering-faculty/'
     },
     {
-      name: 'Dr. P. Rajesh Kumar',
-      designation: 'Professor',
+      name: 'Dr. Krishna Kumari S',
+      designation: 'Associate Professor',
       department: 'ECE, LICET',
-      photoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
+      photoUrl: '/krishna_kumari.jpg',
       role: 'Faculty Coordinator',
+      email: 'krishnakumari.s@licet.ac.in',
       linkUrl: 'https://licet.ac.in/electronics-and-communication-engineering/electronics-and-communication-engineering-faculty/'
     }
   ] as FacultyMember[],

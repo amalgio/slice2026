@@ -61,12 +61,6 @@ export const EventDetailPage: React.FC = () => {
               <span className="bg-[#C5A059] text-[#1E120B] font-cinzel font-bold text-xs px-2.5 py-0.5 rounded">
                 {event.category}
               </span>
-              {event.cashPrize && (
-                <span className="bg-[#C85A17] text-white font-cinzel font-bold text-xs px-2.5 py-0.5 rounded flex items-center space-x-1">
-                  <Award className="w-3.5 h-3.5" />
-                  <span>Prize Pool: {event.cashPrize}</span>
-                </span>
-              )}
             </div>
 
             <h1 className="font-cinzel text-3xl sm:text-5xl font-extrabold text-[#F4E8C1] tracking-wide">

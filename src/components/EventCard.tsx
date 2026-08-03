@@ -52,11 +52,6 @@ export const EventCard: React.FC<EventCardProps> = ({ event, onQuickView }) => {
             </div>
           </div>
 
-          {event.cashPrize && (
-            <span className="bg-[#1E120B] text-[#D4AF37] border-2 border-[#C5A059] text-[10px] font-pixel font-bold px-2 py-0.5 rounded shadow-sm whitespace-nowrap">
-              {event.cashPrize}
-            </span>
-          )}
         </div>
 
         {/* Short Description */}

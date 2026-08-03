@@ -146,7 +146,7 @@ export const AboutPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {ABOUT_DATA.facultyList.map((faculty, idx) => (
             <div key={idx} className="parchment-card p-6 text-center space-y-3 flex flex-col items-center justify-between">
               <a

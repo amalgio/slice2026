@@ -8,18 +8,13 @@ import { CroOscilloscope } from '../components/CroOscilloscope';
 
 export const EventsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedQuickViewEvent, setSelectedQuickViewEvent] = useState<EventItem | null>(null);
 
-  const categories = ['All', 'Technical', 'Non-Technical'];
-
-  // Filter events by category and search term
+  // Filter events by search term
   const filteredEvents = EVENTS_DATA.filter(event => {
-    const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
-    const matchesSearch = event.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          event.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          event.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+    return event.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+           event.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
+           event.category.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
   return (
@@ -38,42 +33,20 @@ export const EventsPage: React.FC = () => {
         </h1>
 
         <p className="font-cormorant italic text-xl text-[#5C4028] max-w-2xl mx-auto">
-          Explore all 8 technical and non-technical challenges. Click any card to view detailed rules, round breakdowns, and coordinator contacts.
+          Explore all technical challenges. Click any card to view detailed rules, round breakdowns, and coordinator contacts.
         </p>
       </div>
 
-      {/* Search & Category Filter Controls */}
-      <div className="bg-[#1E120B] border-2 border-[#C5A059] p-4 sm:p-6 rounded-lg shadow-xl text-[#F4E8C1] flex flex-col md:flex-row items-center justify-between gap-4">
-        
-        {/* Category Filter Pills */}
-        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-          <span className="font-special text-xs text-[#C5A059] flex items-center mr-2">
-            <Filter className="w-4 h-4 mr-1 text-[#D4AF37]" /> Filter:
-          </span>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1.5 text-xs font-cinzel font-bold rounded tracking-wider transition-all ${
-                selectedCategory === cat
-                  ? 'btn-brass text-[#1E120B]'
-                  : 'bg-[#2A1A10] text-[#EADBB1] hover:bg-[#3B2314] border border-[#C5A059]/40'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Vintage DOS Search Input */}
-        <div className="relative w-full md:w-80">
+      {/* Search Input Control */}
+      <div className="bg-[#1E120B] border-2 border-[#C5A059] p-4 sm:p-5 rounded-lg shadow-xl text-[#F4E8C1] flex items-center justify-center">
+        <div className="relative w-full max-w-md">
           <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#C5A059]" />
           <input 
             type="text" 
-            placeholder="Search events, keywords..."
+            placeholder="Search technical events, keywords..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full dos-input pl-9 pr-4 py-2 rounded text-xs focus:outline-none"
+            className="w-full dos-input pl-9 pr-8 py-2 rounded text-xs focus:outline-none"
           />
           {searchQuery && (
             <button 
@@ -84,7 +57,6 @@ export const EventsPage: React.FC = () => {
             </button>
           )}
         </div>
-
       </div>
 
       {/* Events Grid */}
@@ -108,10 +80,10 @@ export const EventsPage: React.FC = () => {
             Try adjusting your search criteria or reset category filters.
           </p>
           <button 
-            onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
+            onClick={() => setSearchQuery('')}
             className="btn-brass px-4 py-2 text-xs rounded uppercase"
           >
-            Reset Filters
+            Clear Search
           </button>
         </div>
       )}

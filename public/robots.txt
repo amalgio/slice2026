@@ -1,8 +1,0 @@
-# SLICE v26 — Department of ECE, LICET
-# Single-page event site: everything is crawlable.
-
-User-agent: *
-Allow: /
-
-# TODO: swap in your real production domain before launch.
-Sitemap: https://slice2026.vercel.app/sitemap.xml

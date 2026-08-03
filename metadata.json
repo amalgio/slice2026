@@ -1,0 +1,6 @@
+{
+  "name": "SLICE'26 - National Level Technical Symposium",
+  "description": "SLICE'26 is the National Level Technical Symposium organized by the Department of Electronics & Communication Engineering, LICET.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

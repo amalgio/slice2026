@@ -56,7 +56,6 @@ export const Footer: React.FC = () => {
               <li><NavLink to="/about" className="hover:text-[#FFF1A0] transition-colors">Department & History</NavLink></li>
               <li><NavLink to="/events" className="hover:text-[#FFF1A0] transition-colors">Symposium Events</NavLink></li>
               <li><NavLink to="/sponsors" className="hover:text-[#FFF1A0] transition-colors">Our Sponsors</NavLink></li>
-              <li><NavLink to="/gallery" className="hover:text-[#FFF1A0] transition-colors">Photo Gallery</NavLink></li>
               <li><NavLink to="/contact" className="hover:text-[#FFF1A0] transition-colors">Contact Coordinators</NavLink></li>
               <li><NavLink to="/register" className="hover:text-[#FFF1A0] transition-colors font-bold text-[#D4AF37]">Registration Form</NavLink></li>
             </ul>

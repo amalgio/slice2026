@@ -9,7 +9,6 @@ import { AboutPage } from './pages/AboutPage';
 import { EventsPage } from './pages/EventsPage';
 import { EventDetailPage } from './pages/EventDetailPage';
 import { SponsorsPage } from './pages/SponsorsPage';
-import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
 import { RegistrationPage } from './pages/RegistrationPage';
 
@@ -44,7 +43,6 @@ export default function App() {
             <Route path="/events" element={<EventsPage />} />
             <Route path="/events/:eventId" element={<EventDetailPage />} />
             <Route path="/sponsors" element={<SponsorsPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/register" element={<RegistrationPage />} />
             {/* Fallback route to home */}

@@ -40,14 +40,6 @@ The department provides an ecosystem for the students to achieve academic excell
       photoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
       role: 'Faculty Coordinator',
       linkUrl: 'https://licet.ac.in/electronics-and-communication-engineering/electronics-and-communication-engineering-faculty/'
-    },
-    {
-      name: 'Prof. Mary Anitha',
-      designation: 'Associate Professor',
-      department: 'ECE, LICET',
-      photoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80',
-      role: 'Faculty Coordinator',
-      linkUrl: 'https://licet.ac.in/electronics-and-communication-engineering/electronics-and-communication-engineering-faculty/'
     }
   ] as FacultyMember[],
   timelineMilestones: [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { Instagram, Linkedin, Youtube, Menu, X, ArrowRight } from 'lucide-react';
+import { Instagram, Linkedin, Menu, X, ArrowRight } from 'lucide-react';
 import { SliceLogo } from './SliceLogo';
 
 export const Navbar: React.FC = () => {
@@ -58,15 +58,6 @@ export const Navbar: React.FC = () => {
                 title="LinkedIn TEC LICET"
               >
                 <Linkedin className="w-4 h-4" />
-              </a>
-              <a 
-                href="https://www.youtube.com/@LICETOfficial" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-[#FFF1A0] hover:scale-110 transition-all duration-200"
-                title="YouTube Channel"
-              >
-                <Youtube className="w-4 h-4" />
               </a>
             </div>
 

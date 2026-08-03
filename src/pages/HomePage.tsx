@@ -74,7 +74,7 @@ export const HomePage: React.FC = () => {
 
           {/* Department Title - Reduced size to keep on a single line */}
           <div className="font-cinzel text-xs sm:text-base md:text-xl lg:text-2xl font-black tracking-[0.14em] text-[#120803] uppercase whitespace-nowrap my-1 drop-shadow-[0_1px_3px_rgba(255,241,160,0.9)] -mt-[219px] pl-[2px] ml-0 w-full text-center">
-            DEPARTMENT OF ELECTRONICS & COMMUNICATION ENGINEERING
+            DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
           </div>
 
           {/* Engraved Master Hero Title (+30% Size Boost) */}

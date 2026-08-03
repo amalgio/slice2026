@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
+import { Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import { SliceLogo } from './SliceLogo';
 
 export const Footer: React.FC = () => {
@@ -89,15 +89,6 @@ export const Footer: React.FC = () => {
                 title="LinkedIn TEC LICET"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://www.youtube.com/@LICETOfficial" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded bg-[#2A1A10] border border-[#C5A059] flex items-center justify-center text-[#C5A059] hover:bg-[#C5A059] hover:text-[#1E120B] transition-all"
-                title="YouTube LICET"
-              >
-                <Youtube className="w-5 h-5" />
               </a>
             </div>
 

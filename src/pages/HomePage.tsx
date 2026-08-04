@@ -68,17 +68,17 @@ export const HomePage: React.FC = () => {
         <div className="py-2 mb-2 flex flex-col items-center justify-center text-[#F4E8C1] relative z-10">
           
           {/* Illuminated Department Logo Emblem */}
-          <div className="mb-2 transition-transform duration-300 hover:scale-105 flex items-center justify-center">
-            <SliceLogo size="3xl" className="-mt-[150px] h-[750px] w-[751px] max-w-none pl-[1px]" />
+          <div className="mb-2 transition-transform duration-300 hover:scale-105 flex items-center justify-center max-w-full overflow-hidden px-2">
+            <SliceLogo size="3xl" className="w-[300px] h-[300px] sm:w-[520px] sm:h-[520px] md:w-[750px] md:h-[750px] max-w-full object-contain -mt-8 sm:-mt-24 md:-mt-[150px]" />
           </div>
 
-          {/* Department Title - Reduced size to keep on a single line */}
-          <div className="font-cinzel text-xs sm:text-base md:text-xl lg:text-2xl font-black tracking-[0.14em] text-[#120803] uppercase whitespace-nowrap my-1 drop-shadow-[0_1px_3px_rgba(255,241,160,0.9)] -mt-[219px] pl-[2px] ml-0 w-full text-center">
+          {/* Department Title */}
+          <div className="font-cinzel text-[10px] sm:text-base md:text-xl lg:text-2xl font-black tracking-normal sm:tracking-[0.14em] text-[#120803] uppercase my-1 drop-shadow-[0_1px_3px_rgba(255,241,160,0.9)] mt-1 sm:-mt-12 md:-mt-[219px] px-2 w-full text-center leading-snug">
             DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
           </div>
 
-          {/* Engraved Master Hero Title (+30% Size Boost) */}
-          <h1 className="font-cinzel text-6xl sm:text-8xl lg:text-9xl font-black bg-gradient-to-b from-[#FFF1A0] via-[#F4B942] via-[#D4AF37] to-[#8A6B3F] bg-clip-text text-transparent tracking-wider my-1 drop-shadow-[0_6px_12px_rgba(0,0,0,0.95)] filter brightness-110 mt-[22px]">
+          {/* Engraved Master Hero Title */}
+          <h1 className="font-cinzel text-5xl sm:text-8xl lg:text-9xl font-black bg-gradient-to-b from-[#FFF1A0] via-[#F4B942] via-[#D4AF37] to-[#8A6B3F] bg-clip-text text-transparent tracking-wider my-1 drop-shadow-[0_6px_12px_rgba(0,0,0,0.95)] filter brightness-110 mt-2 sm:mt-[22px]">
             SLICE 26
           </h1>
 

@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col justify-center">
               <div className="text-[10px] sm:text-xs tracking-wider uppercase text-[#C5A059] font-cinzel font-semibold leading-tight">
-                Department of Electronics & Communication Engineering
+                Slice '26
               </div>
               <div className="text-xs sm:text-sm font-cormorant italic text-[#EADBB1]">
                 Loyola-ICAM College of Engineering & Technology (LICET)

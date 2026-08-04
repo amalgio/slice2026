@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Copyright Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs font-eb text-[#C5A059]/80 text-center sm:text-left">
           <div>
-            © 2026 Department of Electronics & Communication Engineering, LICET. All Rights Reserved.
+            © 2026 Spectrum of Engineers Association, Department of Electronics & Communication Engineering, LICET. All Rights Reserved.
           </div>
           <div className="mt-2 sm:mt-0 font-special text-[11px] text-[#EADBB1]/60">
             Handcrafted with vintage engineering precision for SLICE’26.

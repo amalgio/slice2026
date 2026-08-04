@@ -91,50 +91,6 @@ export const AboutPage: React.FC = () => {
       </section>
 
 
-      {/* Electronics Club (TEC) Feature */}
-      <section className="bg-[#1E120B] border-2 border-[#C5A059] rounded-lg p-8 text-[#F4E8C1] shadow-2xl space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#C5A059]/40 pb-4">
-          <div className="flex items-center space-x-3">
-            <Award className="w-8 h-8 text-[#D4AF37]" />
-            <div>
-              <h3 className="font-cinzel text-2xl font-bold text-[#F4E8C1]">
-                {ABOUT_DATA.electronicsClub.name}
-              </h3>
-              <p className="font-special text-xs text-[#C5A059]">
-                Official ECE Student Guild of LICET
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-3">
-            <a 
-              href={ABOUT_DATA.electronicsClub.instagramUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-walnut px-4 py-2 text-xs rounded uppercase flex items-center space-x-2"
-            >
-              <Instagram className="w-4 h-4 text-[#D4AF37]" />
-              <span>Instagram</span>
-            </a>
-
-            <a 
-              href={ABOUT_DATA.electronicsClub.linkedinUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-brass px-4 py-2 text-xs rounded uppercase flex items-center space-x-2"
-            >
-              <Linkedin className="w-4 h-4 text-[#1E120B]" />
-              <span>LinkedIn</span>
-            </a>
-          </div>
-        </div>
-
-        <p className="font-eb text-base text-[#EADBB1] leading-relaxed">
-          {ABOUT_DATA.electronicsClub.description}
-        </p>
-      </section>
-
-
       {/* Faculty Leadership */}
       <section className="space-y-6">
         <div className="text-center">
@@ -161,7 +117,7 @@ export const AboutPage: React.FC = () => {
                     src={faculty.photoUrl} 
                     alt={faculty.name} 
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-all duration-300"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
 

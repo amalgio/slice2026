@@ -2,6 +2,7 @@ export interface EventRound {
   title: string;
   time?: string;
   description: string;
+  rules: string[];
 }
 
 export interface Coordinator {
@@ -15,16 +16,16 @@ export interface EventItem {
   id: string;
   name: string;
   category: 'Technical' | 'Non-Technical' | 'Flagship' | 'Workshop';
-  shortDescription: string;
-  fullDescription: string;
+  //shortDescription: string;
+  //fullDescription: string;
   roundsCount: number;
   teamSize: string;
   timing: string;
   venue: string;
-  cashPrize?: string;
+  //cashPrize?: string;
   iconName: string; // Lucide icon identifier
   rounds: EventRound[];
-  rules: string[];
+  genrules: string[];
   coordinators: Coordinator[];
   requirements?: string[];
   featured?: boolean;

@@ -30,7 +30,7 @@ export const RegistrationPage: React.FC = () => {
           <div>
             <strong className="font-cinzel text-sm text-[#F4E8C1] block">Registration Notice</strong>
             <span className="text-[#EADBB1]/80">
-              One registration per participant or team leader allows entry across all eligible symposium technical & non-technical events.
+              One registration per participant or team leader allows entry across all eligible symposium technical events.
             </span>
           </div>
         </div>
@@ -46,7 +46,7 @@ export const RegistrationPage: React.FC = () => {
         
         <div className="bg-[#1E120B] text-[#F4E8C1] px-4 py-3 rounded-t-lg border-b border-[#C5A059] flex items-center justify-between mb-4">
           <span className="font-cinzel text-xs font-bold uppercase tracking-wider text-[#D4AF37]">
-            LICET ECE Official Google Registration Portal
+            SLICE '26 Registration Form
           </span>
           <span className="font-special text-[11px] text-[#C5A059]">
             Encrypted & Direct Submission

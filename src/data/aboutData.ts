@@ -17,12 +17,6 @@ The department provides an ecosystem for the students to achieve academic excell
     'To develop a Centre of Excellence in VLSI and Embedded system design.',
     'To provide international exposure to students through collaboration with universities abroad.'
   ],
-  electronicsClub: {
-    name: 'TEC – The Electronics Club',
-    description: 'TEC is the official student body of the Department of ECE at LICET. TEC acts as the vibrant catalyst for technical workshops, hackathons, guest lectures, project expos, and the annual signature national symposium SLICE.',
-    instagramUrl: 'https://www.instagram.com/slice_ece/?hl=en',
-    linkedinUrl: 'https://www.linkedin.com/in/tec-the-electronics-club-licet-a625332a2/'
-  },
   facultyList: [
     {
       name: 'Dr. Jenifer Suriya L J',

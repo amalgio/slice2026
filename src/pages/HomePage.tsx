@@ -68,18 +68,17 @@ export const HomePage: React.FC = () => {
         <div className="py-2 mb-2 flex flex-col items-center justify-center text-[#F4E8C1] relative z-10">
           
           {/* Illuminated Department Logo Emblem */}
-          <div className="mb-2 transition-transform duration-300 hover:scale-105 flex items-center justify-center max-w-full overflow-hidden px-2">
-            <SliceLogo size="3xl" className="w-[300px] h-[300px] sm:w-[520px] sm:h-[520px] md:w-[750px] md:h-[750px] max-w-full object-contain -mt-8 sm:-mt-24 md:-mt-[150px]" />
+          <div className="mb-2 transition-transform duration-300 hover:scale-105 flex items-center justify-center">
+            <SliceLogo size="3xl" className="-mt-[150px] h-[750px] w-[751px] max-w-none pl-[1px]" />
           </div>
-
-          {/* Department Title */}
-          <div className="font-cinzel text-[10px] sm:text-base md:text-xl lg:text-2xl font-black tracking-normal sm:tracking-[0.14em] text-[#120803] uppercase my-1 drop-shadow-[0_1px_3px_rgba(255,241,160,0.9)] mt-1 sm:-mt-12 md:-mt-[219px] px-2 w-full text-center leading-snug">
+          {/* Department Title - Reduced size to keep on a single line */}
+          <div className="font-cinzel text-xs sm:text-base md:text-xl lg:text-2xl font-black tracking-[0.14em] text-[#120803] uppercase whitespace-nowrap my-1 drop-shadow-[0_1px_3px_rgba(255,241,160,0.9)] -mt-[219px] pl-[2px] ml-0 w-full text-center">
             DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
           </div>
 
-          {/* Engraved Master Hero Title */}
-          <h1 className="font-cinzel text-5xl sm:text-8xl lg:text-9xl font-black bg-gradient-to-b from-[#FFF1A0] via-[#F4B942] via-[#D4AF37] to-[#8A6B3F] bg-clip-text text-transparent tracking-wider my-1 drop-shadow-[0_6px_12px_rgba(0,0,0,0.95)] filter brightness-110 mt-2 sm:mt-[22px]">
-            SLICE 26
+          {/* Engraved Master Hero Title (+30% Size Boost) */}
+          <h1 className="font-cinzel text-6xl sm:text-8xl lg:text-9xl font-black bg-gradient-to-b from-[#FFF1A0] via-[#F4B942] via-[#D4AF37] to-[#8A6B3F] bg-clip-text text-transparent tracking-wider my-1 drop-shadow-[0_6px_12px_rgba(0,0,0,0.95)] filter brightness-110 mt-[22px]">
+            SLICE '26
           </h1>
 
           {/* Subtitle */}
@@ -138,7 +137,7 @@ export const HomePage: React.FC = () => {
                   VENUE
                 </span>
                 <span className="font-pixel font-bold text-base sm:text-xl text-[#100803] leading-none tracking-wide block">
-                  MAIN AUDITORIUM
+                  LICET
                 </span>
               </div>
             </div>
@@ -217,7 +216,7 @@ export const HomePage: React.FC = () => {
             Our Symposium Events
           </h2>
           <p className="font-cormorant italic text-lg text-[#5C4028] max-w-xl mx-auto mt-1">
-            8 technical & non-technical challenges designed for innovation, logic, and speed.
+            8 technical challenges designed for innovation, logic, and speed.
           </p>
         </div>
 
@@ -243,112 +242,6 @@ export const HomePage: React.FC = () => {
         </div>
 
       </section>
-
-
-      {/* INTERACTIVE EVENT LOGBOOK PREVIEW (Exact Component Placement from Reference Image) */}
-      <section className="max-w-6xl mx-auto px-4">
-        <div className="bg-[#1E120B] border-2 border-[#C5A059] rounded-lg shadow-2xl p-6 sm:p-8 text-[#F4E8C1]">
-          
-          <div className="border-b border-[#C5A059]/40 pb-4 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <span className="font-special text-xs text-[#C5A059] uppercase tracking-wider">
-                Interactive Engineering Notebook
-              </span>
-              <h2 className="font-cinzel text-2xl font-bold text-[#F4E8C1]">
-                Symposium Arena Quick Log
-              </h2>
-            </div>
-            <span className="text-xs font-eb text-[#EADBB1]/70 italic">
-              Click an event on the left to inspect guidelines on the parchment page.
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-            
-            {/* Left Event List Tabs */}
-            <div className="md:col-span-4 space-y-2 border-r border-[#C5A059]/30 pr-0 md:pr-4">
-              {EVENTS_DATA.slice(0, 7).map((evt) => {
-                const isSelected = activeTabEvent.id === evt.id;
-                return (
-                  <button
-                    key={evt.id}
-                    onClick={() => setActiveTabEvent(evt)}
-                    className={`w-full text-left px-4 py-3 rounded transition-all flex items-center justify-between font-cinzel text-sm ${
-                      isSelected 
-                        ? 'bg-[#C5A059] text-[#1E120B] font-bold shadow-md' 
-                        : 'bg-[#2A1A10] text-[#EADBB1] hover:bg-[#3B2314] hover:text-[#FFF1A0]'
-                    }`}
-                  >
-                    <span className="truncate">{evt.name}</span>
-                    <ArrowRight className={`w-4 h-4 transition-transform ${isSelected ? 'translate-x-1' : 'opacity-40'}`} />
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Right Parchment Inspection Page */}
-            <div className="md:col-span-8 bg-[#F8F3E6] text-[#2D180C] p-6 rounded border border-[#C5A059] shadow-inner space-y-4">
-              
-              <div className="border-b border-[#C5A059]/40 pb-3 flex items-start justify-between">
-                <div>
-                  <span className="font-special text-xs text-[#C85A17] uppercase tracking-wider">
-                    {activeTabEvent.category} Arena
-                  </span>
-                  <h3 className="font-cinzel text-2xl font-bold text-[#1E120B]">
-                    ⚡ {activeTabEvent.name}
-                  </h3>
-                </div>
-
-                <div className="text-right">
-                  <span className="block font-cinzel font-bold text-xs text-[#3B2314]">
-                    Team Size: {activeTabEvent.teamSize}
-                  </span>
-                  <span className="font-special text-xs text-[#C85A17]">
-                    {activeTabEvent.timing}
-                  </span>
-                </div>
-              </div>
-
-              {/* Rounds Breakdown */}
-              <div className="space-y-2">
-                <h4 className="font-cinzel text-sm font-bold text-[#1E120B]">
-                  Rounds Overview ({activeTabEvent.roundsCount} Rounds):
-                </h4>
-                {activeTabEvent.rounds.map((r, i) => (
-                  <div key={i} className="text-xs font-eb p-2.5 bg-[#F4E8C1] rounded border border-[#C5A059]/30">
-                    <div className="font-bold font-cinzel text-[#1E120B] mb-0.5">{r.title} ({r.time})</div>
-                    <div className="text-[#5C4028]">{r.description}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Description */}
-              <div>
-                <h4 className="font-cinzel text-sm font-bold text-[#1E120B] mb-1">
-                  Description:
-                </h4>
-                <p className="font-eb text-sm text-[#3B2314] leading-relaxed">
-                  {activeTabEvent.fullDescription}
-                </p>
-              </div>
-
-              {/* CTA */}
-              <div className="pt-2 flex justify-end">
-                <button
-                  onClick={() => navigate(`/register`)}
-                  className="btn-walnut px-6 py-2 text-xs rounded uppercase tracking-wider"
-                >
-                  Register For {activeTabEvent.name}
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
 
       {/* ABOUT PREVIEW SECTION & SOCIAL LOGBOOK (Matching bottom section of Reference Image) */}
       <section className="max-w-6xl mx-auto px-4">

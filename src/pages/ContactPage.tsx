@@ -60,11 +60,7 @@ export const ContactPage: React.FC = () => {
             <div className="pt-2 space-y-2 font-eb text-sm text-[#5C4028]">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-[#C85A17]" />
-                <span>Email: <strong>slice.ece@licet.ac.in</strong></span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-[#C85A17]" />
-                <span>Helpline: <strong>+91 98401 23456 / +91 98765 43210</strong></span>
+                <span>Email: <strong>slice@licet.ac.in</strong></span>
               </div>
             </div>
           </div>
@@ -87,24 +83,24 @@ export const ContactPage: React.FC = () => {
 
               <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
                 <span className="font-special text-[10px] text-[#C85A17] uppercase block">Staff Coordinator</span>
-                <strong className="block font-cinzel text-sm text-[#1E120B]">Prof. Mary Anitha</strong>
+                <strong className="block font-cinzel text-sm text-[#1E120B]">Prof. Krishnakumari S</strong>
                 <p className="text-[#5C4028]">Associate Professor, ECE</p>
-                <p className="text-[#3B2314]">Ph: +91 94441 87654</p>
+                <p className="text-[#3B2314]">Email: krishnakumari.s@licet.ac.in</p>
               </div>
 
               {/* Student Leads */}
               <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
-                <span className="font-special text-[10px] text-[#C85A17] uppercase block">President, TEC</span>
-                <strong className="block font-cinzel text-sm text-[#1E120B]">Karthik Raja S</strong>
-                <p className="text-[#5C4028]">Final Year ECE</p>
-                <p className="text-[#3B2314]">Ph: +91 98765 43210</p>
+                <span className="font-special text-[10px] text-[#C85A17] uppercase block">Vice President, SEA</span>
+                <strong className="block font-cinzel text-sm text-[#1E120B]">Shwithin Stevart</strong>
+                <p className="text-[#5C4028]">Third Year ECE</p>
+                <p className="text-[#3B2314]">Ph: +91 95001 28440</p>
               </div>
 
               <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
-                <span className="font-special text-[10px] text-[#C85A17] uppercase block">Secretary, TEC</span>
-                <strong className="block font-cinzel text-sm text-[#1E120B]">Ananya V</strong>
+                <span className="font-special text-[10px] text-[#C85A17] uppercase block">Secretary, SEA</span>
+                <strong className="block font-cinzel text-sm text-[#1E120B]">Sharon D</strong>
                 <p className="text-[#5C4028]">Third Year ECE</p>
-                <p className="text-[#3B2314]">Ph: +91 91234 56789</p>
+                <p className="text-[#3B2314]">Ph: +91 96005 80075</p>
               </div>
 
             </div>
@@ -153,10 +149,10 @@ export const ContactPage: React.FC = () => {
             <h2 className="font-cinzel text-lg font-bold text-[#1E120B] px-2">
               Campus Location Map
             </h2>
-            <div className="w-full h-64 rounded border border-[#C5A059] overflow-hidden shadow-inner">
+            <div className="w-full h-177 rounded border border-[#C5A059] overflow-hidden shadow-inner">
               <iframe 
                 title="LICET Campus Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.581898165785!2d80.23126867512429!3d13.061614787262076!2m3!10f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526684e2079075%3A0xcd50bfebae9b4395!2sLoyola-ICAM%20College%20of%20Engineering%20and%20Technology%20(LICET)!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2208.3704812099045!2d80.23220943098943!3d13.059448670124494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266606a8d51eb%3A0xcfedaad4ca5bd750!2sLICET%20%3A%20Loyola-ICAM%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1785873680853!5m2!1sen!2sin"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -165,81 +161,6 @@ export const ContactPage: React.FC = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-          </div>
-
-          {/* Quick Dispatch Logbook Form */}
-          <div className="parchment-card p-6 space-y-4">
-            <h2 className="font-cinzel text-xl font-bold text-[#1E120B] border-b border-[#C5A059]/40 pb-2">
-              Send an Inquiry Note
-            </h2>
-
-            {formSubmitted ? (
-              <div className="p-4 bg-[#1E120B] text-[#F4E8C1] rounded border border-[#C5A059] text-center space-y-2 animate-fadeIn">
-                <CheckCircle2 className="w-8 h-8 text-[#D4AF37] mx-auto" />
-                <h3 className="font-cinzel text-lg font-bold">Note Received!</h3>
-                <p className="font-eb text-xs text-[#EADBB1]/80">
-                  Your inquiry has been dispatched to the symposium secretariat.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-3 font-mono-retro text-xs text-[#3B2314]">
-                <div>
-                  <label className="block font-pixel text-[12px] text-[#705335] uppercase font-bold mb-1">&gt; YOUR NAME</label>
-                  <input 
-                    type="text" 
-                    required
-                    value={inquiry.name}
-                    onChange={(e) => setInquiry({ ...inquiry, name: e.target.value })}
-                    placeholder="Rahul Sharma"
-                    className="w-full dos-input p-2.5 rounded text-xs focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block font-pixel text-[12px] text-[#705335] uppercase font-bold mb-1">&gt; EMAIL ADDRESS</label>
-                  <input 
-                    type="email" 
-                    required
-                    value={inquiry.email}
-                    onChange={(e) => setInquiry({ ...inquiry, email: e.target.value })}
-                    placeholder="rahul@college.edu"
-                    className="w-full dos-input p-2.5 rounded text-xs focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block font-pixel text-[12px] text-[#705335] uppercase font-bold mb-1">&gt; SUBJECT</label>
-                  <input 
-                    type="text" 
-                    required
-                    value={inquiry.subject}
-                    onChange={(e) => setInquiry({ ...inquiry, subject: e.target.value })}
-                    placeholder="Wattage War Timing Query"
-                    className="w-full dos-input p-2.5 rounded text-xs focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block font-pixel text-[12px] text-[#705335] uppercase font-bold mb-1">&gt; MESSAGE DETAIL</label>
-                  <textarea 
-                    rows={4}
-                    required
-                    value={inquiry.message}
-                    onChange={(e) => setInquiry({ ...inquiry, message: e.target.value })}
-                    placeholder="Type your question or request..."
-                    className="w-full dos-input p-2.5 rounded text-xs focus:outline-none"
-                  />
-                </div>
-
-                <button 
-                  type="submit"
-                  className="btn-walnut w-full py-3 text-sm rounded uppercase flex items-center justify-center space-x-2"
-                >
-                  <Send className="w-4 h-4 text-[#D4AF37]" />
-                  <span>Dispatch Inquiry</span>
-                </button>
-              </form>
-            )}
           </div>
 
         </div>

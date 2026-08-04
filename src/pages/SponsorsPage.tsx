@@ -101,19 +101,11 @@ export const SponsorsPage: React.FC = () => {
 
         <div className="flex flex-wrap items-center gap-4 pt-2">
           <a 
-            href="mailto:slice.ece@licet.ac.in"
+            href="mailto:slice@licet.ac.in"
             className="btn-walnut px-6 py-3 text-xs rounded uppercase flex items-center space-x-2"
           >
             <Mail className="w-4 h-4 text-[#D4AF37]" />
             <span>Request Sponsorship Prospectus</span>
-          </a>
-
-          <a 
-            href="tel:+919840123456"
-            className="btn-brass px-6 py-3 text-xs rounded uppercase flex items-center space-x-2"
-          >
-            <Phone className="w-4 h-4" />
-            <span>Call Convenor Desk</span>
           </a>
         </div>
       </section>

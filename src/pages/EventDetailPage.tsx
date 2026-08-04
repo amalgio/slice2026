@@ -33,7 +33,6 @@ export const EventDetailPage: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="relative z-10 pt-28 pb-16 space-y-10 max-w-5xl mx-auto px-4">
       
@@ -119,16 +118,6 @@ export const EventDetailPage: React.FC = () => {
         
         {/* Left Column: Full Description, Rounds, Rules */}
         <div className="md:col-span-2 space-y-8">
-          
-          {/* Detailed Overview */}
-          <div className="parchment-card p-6 sm:p-8 space-y-3">
-            <h2 className="font-cinzel text-xl font-bold text-[#1E120B] border-b border-[#C5A059]/40 pb-2">
-              Event Overview & Philosophy
-            </h2>
-            <p className="font-eb text-base text-[#3B2314] leading-relaxed">
-              {event.fullDescription}
-            </p>
-          </div>
 
           {/* Round Breakdown */}
           {event.rounds && event.rounds.length > 0 && (
@@ -149,6 +138,17 @@ export const EventDetailPage: React.FC = () => {
                     <p className="font-eb text-sm text-[#5C4028] pt-1">
                       {round.description}
                     </p>
+                    <p className="font-cinzel text-sm text-[#5C4028] pt-1.5">Rules</p>
+                    <p className="font-eb text-sm text-[#5C4028] pt-1">
+                      <ul className="space-y-2.5 font-eb text-sm text-[#3B2314]">
+                      {round.rules?.map((rule, idx) => (
+                        <li key={idx} className="flex items-start space-x-3">
+                          <CheckCircle2 className="w-4 h-4 text-[#C85A17] mt-0.5 flex-shrink-0" />
+                          <span>{rule}</span>
+                        </li>
+                      ))}
+              </ul>
+                    </p>
                   </div>
                 ))}
               </div>
@@ -156,20 +156,21 @@ export const EventDetailPage: React.FC = () => {
           )}
 
           {/* Rules & Guidelines */}
-          {event.rules && event.rules.length > 0 && (
+          {event.genrules && event.genrules.length > 0 && (
             <div className="parchment-card p-6 sm:p-8 space-y-4">
               <h2 className="font-cinzel text-xl font-bold text-[#1E120B] border-b border-[#C5A059]/40 pb-2">
-                Rules & Regulations
+                Rules and Regulations
               </h2>
 
               <ul className="space-y-2.5 font-eb text-sm text-[#3B2314]">
-                {event.rules.map((rule, idx) => (
+                {event.genrules.map((rule, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
                     <CheckCircle2 className="w-4 h-4 text-[#C85A17] mt-0.5 flex-shrink-0" />
                     <span>{rule}</span>
                   </li>
                 ))}
               </ul>
+              
             </div>
           )}
 

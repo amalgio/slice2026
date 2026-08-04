@@ -161,7 +161,7 @@ export const AboutPage: React.FC = () => {
                     src={faculty.photoUrl} 
                     alt={faculty.name} 
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-cover transition-all duration-300"
                   />
                 </div>
 

@@ -10,7 +10,7 @@ interface TimeLeft {
 
 export const CountdownTimer: React.FC = () => {
   // Target date: August 8, 2026 at 9:30 AM IST
-  const targetDate = new Date('2026-08-08T09:30:00+05:30').getTime();
+  const targetDate = new Date('2026-08-08T10:00:00+05:30').getTime();
 
   const calculateTimeLeft = (): TimeLeft => {
     const now = new Date().getTime();

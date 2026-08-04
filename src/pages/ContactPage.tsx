@@ -73,22 +73,14 @@ export const ContactPage: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
-              {/* Faculty Convenors */}
-              <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
-                <span className="font-special text-[10px] text-[#C85A17] uppercase block">Faculty Convenor</span>
-                <strong className="block font-cinzel text-sm text-[#1E120B]">Dr. Jenifer Suriya L J</strong>
-                <p className="text-[#5C4028]">Head of the Department, ECE</p>
-                <p className="text-[#3B2314]">Email: hodece@licet.ac.in</p>
-              </div>
-
-              <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
-                <span className="font-special text-[10px] text-[#C85A17] uppercase block">Staff Coordinator</span>
-                <strong className="block font-cinzel text-sm text-[#1E120B]">Prof. Krishnakumari S</strong>
-                <p className="text-[#5C4028]">Associate Professor, ECE</p>
-                <p className="text-[#3B2314]">Email: krishnakumari.s@licet.ac.in</p>
-              </div>
-
               {/* Student Leads */}
+              <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
+                <span className="font-special text-[10px] text-[#C85A17] uppercase block">President, SEA</span>
+                <strong className="block font-cinzel text-sm text-[#1E120B]">John Arokia Xavier</strong>
+                <p className="text-[#5C4028]">Fourth Year ECE</p>
+                <p className="text-[#3B2314]">Ph: +91 94448 90566</p>
+              </div>
+
               <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
                 <span className="font-special text-[10px] text-[#C85A17] uppercase block">Vice President, SEA</span>
                 <strong className="block font-cinzel text-sm text-[#1E120B]">Shwithin Stevart</strong>
@@ -101,6 +93,13 @@ export const ContactPage: React.FC = () => {
                 <strong className="block font-cinzel text-sm text-[#1E120B]">Sharon D</strong>
                 <p className="text-[#5C4028]">Third Year ECE</p>
                 <p className="text-[#3B2314]">Ph: +91 96005 80075</p>
+              </div>
+
+              <div className="p-3 bg-[#EADBB1]/60 rounded border border-[#C5A059]/30 text-xs font-eb space-y-1">
+                <span className="font-special text-[10px] text-[#C85A17] uppercase block">Treasurer, SEA</span>
+                <strong className="block font-cinzel text-sm text-[#1E120B]">Sathesh R</strong>
+                <p className="text-[#5C4028]">Third Year ECE</p>
+                <p className="text-[#3B2314]">Ph: +91 93454 51604</p>
               </div>
 
             </div>

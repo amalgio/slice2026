@@ -117,7 +117,7 @@ export const AboutPage: React.FC = () => {
                     src={faculty.photoUrl} 
                     alt={faculty.name} 
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
@@ -127,9 +127,6 @@ export const AboutPage: React.FC = () => {
                   </h3>
                   <p className="font-special text-xs text-[#C85A17]">
                     {faculty.designation}
-                  </p>
-                  <p className="font-eb text-xs text-[#5C4028] mt-1">
-                    {faculty.role}
                   </p>
                   {faculty.email && (
                     <a 

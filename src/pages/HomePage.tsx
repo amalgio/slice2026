@@ -155,7 +155,7 @@ export const HomePage: React.FC = () => {
                   TIME
                 </span>
                 <span className="font-pixel font-bold text-base sm:text-xl text-[#100803] leading-none tracking-wide">
-                  9:30 AM ONWARDS
+                  10:00 AM ONWARDS
                 </span>
               </div>
             </div>
@@ -280,7 +280,7 @@ export const HomePage: React.FC = () => {
                 <span className="font-special text-xs uppercase tracking-widest">Stay Connected</span>
               </div>
               <h3 className="font-cinzel text-2xl font-bold text-[#1E120B] mb-2">
-                Follow TEC LICET
+                Follow Us
               </h3>
               <p className="font-eb text-sm text-[#5C4028] mb-6">
                 Get real-time symposium updates, rulebooks, venue announcements, and behind-the-scenes teasers on our official channels.

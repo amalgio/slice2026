@@ -24,7 +24,7 @@ export const EVENTS_DATA: EventItem[] = [
   rounds: [
     {
       title: "Round 1 – Tech Quest",
-      time: "09:30 AM – 12:40 PM",
+      time: "10:00 AM – 12:40 PM",
       description:
         "Teams compete by answering electronics and technology-related questions to collect puzzle pieces and assemble the complete puzzle.",
 
@@ -261,7 +261,7 @@ export const EVENTS_DATA: EventItem[] = [
   rounds: [
     {
       title: "Round 1 – MisCode",
-      time: "09:30 AM – 12:00 PM",
+      time: "10:00 AM – 12:00 PM",
       description:
         "Teams work together to identify and complete missing code segments in a given program using teamwork and observation.",
 
@@ -407,7 +407,7 @@ export const EVENTS_DATA: EventItem[] = [
   rounds: [
     {
       title: "Round 1 – Idea Pitch Presentation",
-      time: "09:20 AM – 12:30 PM",
+      time: "10:00 AM – 12:30 PM",
       description:
         "Teams present their innovative idea before the judges, showcasing its technical feasibility, innovation, and practical application.",
 

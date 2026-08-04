@@ -162,49 +162,96 @@ export const CroOscilloscope: React.FC<CroOscilloscopeProps> = ({
       const centerY = height / 2;
 
       if (digitalMode === 'sample') {
-        // Digital Sample Waveform with Discrete Logic Sample Dots
+        // Digital Quantized Zero-Order-Hold (Staircase Step) DAC/ADC Waveform
+        const sampleStep = 12; // Sample step width
+        const quantizationLevels = 16; // 4-bit / 16-level digital quantization
+
         ctx.strokeStyle = '#00FFCC';
         ctx.fillStyle = '#39FF14';
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 2.5;
+
+        // Draw Digital Quantization Horizontal Level Lines
+        ctx.strokeStyle = 'rgba(0, 255, 204, 0.08)';
+        ctx.lineWidth = 1;
+        for (let l = 0; l <= quantizationLevels; l++) {
+          const ly = centerY - amplitude + (l / quantizationLevels) * (amplitude * 2);
+          ctx.beginPath();
+          ctx.moveTo(0, ly);
+          ctx.lineTo(width, ly);
+          ctx.stroke();
+        }
+
+        // Draw Digital Quantized Staircase Trace
+        ctx.strokeStyle = '#00FFCC';
+        ctx.shadowColor = '#00FFCC';
+        ctx.shadowBlur = 8;
+        ctx.lineWidth = 2.5;
         ctx.beginPath();
 
-        const step = 8; // Digital discretization sample step
-        for (let x = 0; x < width; x += step) {
+        let prevY = centerY;
+
+        for (let x = 0; x <= width; x += sampleStep) {
           const rad = (x / width) * Math.PI * 2 * frequency + (isDigitalRunning ? t : 0);
-          let y = centerY;
+          let rawY = 0;
 
           if (waveType === 'sine') {
-            y = centerY - Math.sin(rad) * amplitude;
+            rawY = Math.sin(rad);
           } else if (waveType === 'square') {
-            y = centerY - (Math.sin(rad) >= 0 ? 1 : -1) * amplitude;
+            rawY = Math.sin(rad) >= 0 ? 1 : -1;
           } else if (waveType === 'triangle') {
-            y = centerY - (2 / Math.PI) * Math.asin(Math.sin(rad)) * amplitude;
+            rawY = (2 / Math.PI) * Math.asin(Math.sin(rad));
           } else if (waveType === 'sawtooth') {
             const frac = (rad / (2 * Math.PI)) % 1;
             const positiveFrac = frac < 0 ? frac + 1 : frac;
-            y = centerY - (2 * positiveFrac - 1) * amplitude;
+            rawY = 2 * positiveFrac - 1;
           }
 
-          if (x === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
+          // Quantize signal into discrete digital steps
+          const normalized = (rawY + 1) / 2; // 0.0 to 1.0
+          const discreteStep = Math.round(normalized * (quantizationLevels - 1)) / (quantizationLevels - 1);
+          const quantizedY = centerY - (discreteStep * 2 - 1) * amplitude;
+
+          if (x === 0) {
+            ctx.moveTo(x, quantizedY);
+          } else {
+            // Zero-Order Hold: Horizontal line to sample X, then vertical jump to new Y
+            ctx.lineTo(x, prevY);
+            ctx.lineTo(x, quantizedY);
+          }
+          prevY = quantizedY;
         }
         ctx.stroke();
+        ctx.shadowBlur = 0;
 
-        // Overlay discrete sample points
-        for (let x = 0; x < width; x += step * 2) {
+        // Draw Digital Vertical Sample Drop Lines & Square Node Markers
+        for (let x = 0; x <= width; x += sampleStep * 2) {
           const rad = (x / width) * Math.PI * 2 * frequency + (isDigitalRunning ? t : 0);
-          let y = centerY;
-          if (waveType === 'sine') y = centerY - Math.sin(rad) * amplitude;
-          else if (waveType === 'square') y = centerY - (Math.sin(rad) >= 0 ? 1 : -1) * amplitude;
-          else if (waveType === 'triangle') y = centerY - (2 / Math.PI) * Math.asin(Math.sin(rad)) * amplitude;
+          let rawY = 0;
+
+          if (waveType === 'sine') rawY = Math.sin(rad);
+          else if (waveType === 'square') rawY = Math.sin(rad) >= 0 ? 1 : -1;
+          else if (waveType === 'triangle') rawY = (2 / Math.PI) * Math.asin(Math.sin(rad));
           else if (waveType === 'sawtooth') {
             const frac = (rad / (2 * Math.PI)) % 1;
             const positiveFrac = frac < 0 ? frac + 1 : frac;
-            y = centerY - (2 * positiveFrac - 1) * amplitude;
+            rawY = 2 * positiveFrac - 1;
           }
+
+          const normalized = (rawY + 1) / 2;
+          const discreteStep = Math.round(normalized * (quantizationLevels - 1)) / (quantizationLevels - 1);
+          const quantizedY = centerY - (discreteStep * 2 - 1) * amplitude;
+
+          // Vertical Drop Line
+          ctx.strokeStyle = 'rgba(57, 255, 20, 0.25)';
+          ctx.lineWidth = 1;
           ctx.beginPath();
-          ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-          ctx.fill();
+          ctx.moveTo(x, centerY);
+          ctx.lineTo(x, quantizedY);
+          ctx.stroke();
+
+          // Square Digital Sample Node
+          ctx.fillStyle = '#39FF14';
+          ctx.fillRect(x - 2.5, quantizedY - 2.5, 5, 5);
         }
 
       } else if (digitalMode === 'fft') {

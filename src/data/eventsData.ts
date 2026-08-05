@@ -489,8 +489,8 @@ export const EVENTS_DATA: EventItem[] = [
         "Research papers should preferably follow IEEE format (6–15 pages).",
         "Project reports should be 3–10 pages describing the problem statement, methodology, implementation, results, and future scope.",
         "Poster presentations must include a one-page abstract.",
-        "Each team is allotted 6 minutes for presentation.",
-        "A 6-minute Question & Answer session follows every presentation (4 minutes by the jury and 2 minutes by students).",
+        "Each team is allotted 7 minutes for presentation.",
+        "A 3-minute Question & Answer session follows every presentation.",
         "Participants must submit their abstract, presentation slides, and relevant documents during registration.",
         "A panel of judges evaluates every presentation.",
         "Evaluation is based on Technical Content & Innovation, Problem Identification, Methodology, Results, Presentation Skills, and Response to Questions."

@@ -107,7 +107,7 @@ export const CountdownTimer: React.FC = () => {
             <Clock className="w-4 h-4 text-[#F4B942]" />
           </div>
           <p className="font-cormorant italic text-sm sm:text-base text-[#D4AF37] font-semibold tracking-wide pt-1">
-            AUGUST 8, 2026 • 09:30 AM IST • LICET CAMPUS
+            AUGUST 8, 2026 • 10:00 AM IST • LICET CAMPUS
           </p>
         </div>
 

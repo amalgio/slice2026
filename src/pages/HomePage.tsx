@@ -119,7 +119,7 @@ export const HomePage: React.FC = () => {
                   DATE
                 </span>
                 <span className="font-pixel font-bold text-base sm:text-xl text-[#100803] leading-none tracking-wide">
-                  8th AUGUST 2026
+                  08th AUGUST 2026
                 </span>
               </div>
             </div>

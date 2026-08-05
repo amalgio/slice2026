@@ -245,7 +245,7 @@ export const EVENTS_DATA: EventItem[] = [
   roundsCount: 2,
   teamSize: "2 Members",
   timing: "10:00 AM – 02:30 PM",
-  venue: "J21",
+  venue: "E11",
   iconName: "Code2",
   featured: true,
 

@@ -34,7 +34,7 @@ export interface EventItem {
 export interface Sponsor {
   id: string;
   name: string;
-  tier: 'Title Sponsor' | 'Co-Sponsor' | 'Technical Partner' | 'Associate Partner' | 'Food & Beverage';
+  tier?: 'Diamond' | 'Platinum' | 'Gold' | 'Silver' | 'Bronze';
   logoUrl: string;
   websiteUrl?: string;
   description: string;

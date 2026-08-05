@@ -12,7 +12,7 @@ export const SPONSORS_DATA: Sponsor[] = [
   },
   {
     id: 'eeci-gate-academy',
-    name: 'Eeci',
+    name: 'Eeci GATE',
     tier: 'Proud Sponsor',
     logoUrl: '/eecigate_logo.png',
     websiteUrl: 'https://www.eecigate.in',

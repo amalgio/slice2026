@@ -60,10 +60,23 @@ export const SponsorsPage: React.FC = () => {
                       {sponsor.tier}
                     </span>
                   </div>
-
                   <p className="font-eb text-sm text-[#3B2314] leading-relaxed">
                     {sponsor.description}
                   </p>
+                  <p> Email:</p>
+                  <a href={`mailto:${sponsor.email}`} className="flex items-center space-x-2 hover:text-[#1E120B]">
+                            <Mail className="w-3.5 h-3.5 text-[#C5A059]" />
+                            <span>{sponsor.email}</span>
+                          </a>
+                  <p> Telephone/Mobile:</p>
+                  {sponsor.phone?.map((rule, idx) => (
+                        <li key={idx} className="flex items-start space-x-3">
+                          <a href={`tel:${rule}`} className="flex items-center space-x-2 hover:text-[#1E120B]">
+                            <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
+                            <span>{rule}</span>
+                          </a>
+                        </li>
+                      ))}
                 </div>
               </div>
 

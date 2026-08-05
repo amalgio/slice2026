@@ -38,6 +38,8 @@ export interface Sponsor {
   logoUrl: string;
   websiteUrl?: string;
   description: string;
+  phone?: string[];
+  email?: string;
 }
 
 export interface PolaroidPhoto {

@@ -39,6 +39,7 @@ export interface Sponsor {
   logoUrl: string;
   websiteUrl?: string;
   description: string;
+  thollai?:boolean;
   phone?: string[];
   email?: string;
 }

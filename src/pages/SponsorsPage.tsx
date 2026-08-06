@@ -1,6 +1,6 @@
 import React from 'react';
 import { SPONSORS_DATA } from '../data/sponsorsData';
-import { Award, ExternalLink, Mail, Phone } from 'lucide-react';
+import { Award, ExternalLink, Globe, Mail, Phone } from 'lucide-react';
 
 export const SponsorsPage: React.FC = () => {
   const proudSponsors = SPONSORS_DATA.filter(s => s.tier === 'Proud Sponsor');
@@ -63,12 +63,30 @@ export const SponsorsPage: React.FC = () => {
                   <p className="font-eb text-sm text-[#3B2314] leading-relaxed">
                     {sponsor.description}
                   </p>
+                  {sponsor.thollai && (
+                    <p>Website:</p>
+                  )}
+                  {sponsor.thollai && (
+                    <a href={sponsor.websiteUrl} className="flex items-center space-x-2 hover:text-[#1E120B]">
+                      <Globe className="w-3.5 h-3.5 text-[#C5A059]" />
+                          <span>{sponsor.websiteUrl}</span>
+                  </a>
+                  )}
                   <p> Email:</p>
                   <a href={`mailto:${sponsor.email}`} className="flex items-center space-x-2 hover:text-[#1E120B]">
-                            <Mail className="w-3.5 h-3.5 text-[#C5A059]" />
-                            <span>{sponsor.email}</span>
+                      <Mail className="w-3.5 h-3.5 text-[#C5A059]" />
+                          <span>{sponsor.email}</span>
+                  </a>
+                  {sponsor.thollai && (
+                    <p>Telephone:</p>
+                  )}
+                  {sponsor.thollai && (
+                    <a href={`tel:'+91 44 2382 0927'`} className="flex items-center space-x-2 hover:text-[#1E120B]">
+                            <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
+                            <span>+91 44 2382 0927</span>
                           </a>
-                  <p> Telephone/Mobile:</p>
+                  )}
+                  <p>Mobile:</p>
                   {sponsor.phone?.map((rule, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
                           <a href={`tel:${rule}`} className="flex items-center space-x-2 hover:text-[#1E120B]">

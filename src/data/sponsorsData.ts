@@ -9,8 +9,9 @@ export const SPONSORS_DATA: Sponsor[] = [
     logoUrl: '/chemix.png',
     websiteUrl: 'https://www.chemixcc.com',
     description: 'CHEMIX ConCare Systems is a leading, engineering-driven waterproofing and construction chemicals specialist, delivering high-performance, technically advanced solutions engineered for long-term durability, resilience, and reliability. Established in 2007, CHEMIX ConCare Systems has its Corporate Office in Chennai, Tamil Nadu, with CHEMIX Structural Services serving as its Branch Office in Sullurpeta, Andhra Pradesh. The company delivers specialized waterproofing and construction chemical solutions for government, residential, commercial, institutional, industrial, and infrastructure projects across India. Backed by a leadership team with over three decades of collective industry experience, CHEMIX integrates advanced construction chemical technologies, engineering expertise, stringent quality standards, and precision-driven execution to protect, strengthen, and enhance the structural integrity, durability, and lifecycle performance of concrete structures. Guided by innovation, uncompromising quality, and engineering excellence, the company delivers sustainable, value-engineered solutions while fostering enduring partnerships founded on trust, integrity, technical excellence, and exceptional project delivery.',
-    phone: ['+91 44 2382 0927', '+91 94457 00927','+91 90805 45348'],
-    email: 'mail@chemixcc.com'
+    phone: [ '+91 94457 00927','+91 90805 45348'],
+    email: 'mail@chemixcc.com',
+    thollai: true
   },
   {
     id: 'eeci-gate-academy',

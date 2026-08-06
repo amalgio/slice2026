@@ -86,13 +86,14 @@ export const EVENTS_DATA: EventItem[] = [
   featured: true,
 
   genrules: [
-    "Each team shall consist of 3 members.",
-    "Participants must report to the venue before their allotted slot.",
-    "Mobile phones are strictly prohibited during Rounds 1 and 2.",
-    "During Round 3, one mobile phone per team is permitted only for scanning the QR codes used in the game.",
-    "The decision of the judges and event coordinators will be final and binding.",
-    "Participants are expected to maintain discipline throughout the event."
-  ],
+  "Each team must consist of three members.",
+  "Shortlisted teams must report to the venue on time.",
+  "Participants should clarify any doubts or seek instructions before the event begins.",
+  "All participants are expected to maintain discipline throughout the event. Any act of indiscipline will lead to disqualification.",
+  "Participants must carry their College ID cards for verification purposes.",
+  "Effective time management is an important criterion for evaluation.",
+  "Mobile phones are strictly prohibited during the event."
+],
 
   rounds: [
     {
@@ -102,15 +103,10 @@ export const EVENTS_DATA: EventItem[] = [
         "An icebreaker activity where one member acts out an electronics component or technical term while teammates identify it within the time limit.",
 
       rules: [
-        "One member from each team draws an activity by lot.",
-        "The selected participant explains or enacts an electronics component or technical term without revealing its name.",
-        "Teammates must identify the correct term within the allotted time.",
-        "Each question has a maximum time limit of 1 minute.",
-        "Each team attempts 3 questions.",
-        "Scoring is based on correct guesses and the speed of identification.",
-        "Round is conducted in four slots.",
-        "Mobile phones are not allowed."
-      ]
+  "One member from each team will represent the team in all clue-based tasks.",
+  "The remaining team members work together to guess the correct answer.",
+  "Accuracy and teamwork are considered throughout the round."
+]
     },
 
     {
@@ -120,15 +116,9 @@ export const EVENTS_DATA: EventItem[] = [
         "Shortlisted teams solve scrambled electronics-based questions in a competitive passing format.",
 
       rules: [
-        "Only the shortlisted teams from Round 1 participate.",
-        "Teams are seated in a semicircle facing the projector.",
-        "Questions contain scrambled electronics-related terms.",
-        "Each team gets 20 seconds to answer.",
-        "If a team fails to answer within the time limit, the question is passed according to the specified rotation pattern.",
-        "Questions alternate between forward and reverse passing order.",
-        "Scoring is based on correct answers.",
-        "Top-performing teams qualify for the final round."
-      ]
+  "Ten teams from Round 1 will be shortlisted.",
+  "Each team will be given 20 seconds to answer a single question."
+]
     },
 
     {
@@ -138,16 +128,9 @@ export const EVENTS_DATA: EventItem[] = [
         "Teams troubleshoot and repair a faulty electronic circuit using hints unlocked through QR-code mini games.",
 
       rules: [
-        "Only the Top 5 shortlisted teams participate.",
-        "Each team receives one faulty electronic circuit.",
-        "Five QR codes are hidden around the venue.",
-        "Each QR code unlocks a mini-game that reveals a troubleshooting hint.",
-        "Only one mobile phone per team is allowed, solely for scanning QR codes.",
-        "Teams must diagnose and repair the circuit using the collected hints.",
-        "Scoring is based on repair time and the number of hints used.",
-        "Fewer hints and faster completion receive higher scores.",
-        "A sudden-death tie-breaker will be conducted if required."
-      ]
+  "Teams progress through a series of puzzles.",
+  "Finalists are selected based on accuracy and completion time."
+]
     }
   ],
 
@@ -539,13 +522,13 @@ export const EVENTS_DATA: EventItem[] = [
   featured: true,
 
   genrules: [
-    "Each team must consist of 2 participants.",
-    "Participants must report to the venue before their allotted slot.",
-    "Only teams that successfully complete Round 1 qualify for Round 2.",
-    "The use of mobile phones, smart devices, or any form of external assistance is strictly prohibited during the event.",
-    "Any form of unfair practice or damage to the provided components will result in immediate disqualification.",
-    "The decision of the judges and event coordinators will be final and binding."
-  ],
+  "Each team must consist of 2 participants.",
+  "Participants must report before their allotted slot.",
+  "Only teams that successfully complete Round 1 qualify for Round 2.",
+  "The use of mobile phones, smart devices, or any form of external assistance is strictly prohibited.",
+  "Any form of unfair practice or damage to the provided components will result in immediate disqualification.",
+  "The decision of the event coordinators will be final and binding."
+],
 
   rounds: [
     {
@@ -555,14 +538,15 @@ export const EVENTS_DATA: EventItem[] = [
         "Teams build an electronic Random Number Generator (RNG) circuit capable of generating numbers from 0 to 9. The completed circuit serves as the Mission Controller for the final round.",
 
       rules: [
-        "Each team must consist of 2 participants.",
-        "No prior circuit knowledge is required.",
-        "All necessary electronic components and instructions will be provided.",
-        "Teams must successfully build and demonstrate a working RNG circuit within the allotted time.",
-        "The completed RNG must generate random numbers from 0 to 9.",
-        "Only teams that successfully complete Round 1 qualify for Round 2.",
-        "The use of mobile phones or any external assistance is strictly prohibited."
-      ]
+  "Each team must consist of 2 participants.",
+  "No prior circuit knowledge is required.",
+  "All necessary components and instructions will be provided.",
+  "Teams must successfully build and demonstrate a working RNG circuit within the allotted time.",
+  "The completed RNG circuit must generate numbers from 0 to 9.",
+  "The RNG circuit will serve as the Mission Controller for Round 2.",
+  "Only teams that successfully complete Round 1 qualify for Round 2.",
+  "The use of mobile phones or external assistance is strictly prohibited."
+]
     },
 
     {
@@ -572,18 +556,19 @@ export const EVENTS_DATA: EventItem[] = [
         "Using the RNG circuit built in Round 1, teams unlock classified missions, collect clues, determine the Bomb Deactivation Number, and disconnect the correct wire before time runs out.",
 
       rules: [
-        "Only Round 1 qualifiers may participate.",
-        "The Bomb Deactivation Setup and Instruction Manual will be provided.",
-        "Each unique RNG number unlocks a classified mission.",
-        "Successfully completing missions rewards teams with clues.",
-        "All clues must be preserved to determine the correct Bomb Deactivation Number.",
-        "If an RNG number repeats, the team must complete a Security Protocol Challenge.",
-        "The Bomb Deactivation Number corresponds to a coloured wire in the Instruction Manual.",
-        "Teams are allowed only ONE chance to unplug the correct wire.",
-        "Disconnecting the wrong wire results in mission failure.",
-        "The use of mobile phones, smart devices, or external assistance is strictly prohibited.",
-        "Any unfair practice or damage to the provided components will result in immediate disqualification."
-      ]
+  "Only Round 1 qualifiers may participate.",
+  "The Bomb Deactivation Setup and Instruction Manual will be provided.",
+  "Each unique RNG number unlocks a classified mission.",
+  "Successfully completing missions rewards teams with valuable clues.",
+  "All clues must be preserved to determine the Bomb Deactivation Number.",
+  "Repeated RNG numbers require completion of a Security Protocol Challenge.",
+  "Using the collected clues, teams determine the correct Bomb Deactivation Number.",
+  "The Bomb Deactivation Number corresponds to a coloured wire in the Instruction Manual.",
+  "Teams have only ONE chance to disconnect the correct wire.",
+  "Disconnecting the wrong wire results in mission failure.",
+  "The use of mobile phones, smart devices, or external assistance is strictly prohibited.",
+  "Any unfair practice or damage to the provided components results in immediate disqualification."
+]
     }
   ],
 

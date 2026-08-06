@@ -28,6 +28,7 @@ export interface EventItem {
   genrules: string[];
   coordinators: Coordinator[];
   requirements?: string[];
+  sponsor?: boolean;
   featured?: boolean;
 }
 

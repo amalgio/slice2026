@@ -389,7 +389,7 @@ export const EVENTS_DATA: EventItem[] = [
   venue: "E33",
   iconName: "Flame",
   featured: true,
-
+  sponsor: true,
   genrules: [
     "Each team must consist of 1–3 members.",
     "Registration is online only.",

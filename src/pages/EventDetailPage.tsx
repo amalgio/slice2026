@@ -211,20 +211,30 @@ export const EventDetailPage: React.FC = () => {
           </div>
 
           {/* Requirements Card */}
-          {event.requirements && event.requirements.length > 0 && (
+          {event.sponsor == true && (
             <div className="parchment-card p-6 space-y-3">
               <h3 className="font-cinzel text-lg font-bold text-[#1E120B] border-b border-[#C5A059]/40 pb-2">
-                What To Bring
+                Event Mentor
               </h3>
-
-              <ul className="space-y-2 font-eb text-xs text-[#3B2314]">
-                {event.requirements.map((req, idx) => (
-                  <li key={idx} className="flex items-center space-x-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C85A17]" />
-                    <span>{req}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-lg overflow-hidden border-2 border-[#C5A059] shadow-lg group-hover:scale-105 group-hover:border-[#D4AF37] transition-all duration-300 bg-[#EADBB1]/40">
+                  <img 
+                    src='/licet_iic.jpeg' 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover"
+                  />
+                  
+                </div>
+               <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-lg overflow-hidden border-2 border-[#C5A059] shadow-lg group-hover:scale-105 group-hover:border-[#D4AF37] transition-all duration-300 bg-[#EADBB1]/40">
+                  <img 
+                    src='/lakic_logo.png' 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover"
+                  />
+                  
+                </div>
+                
+             
+             
             </div>
           )}
 

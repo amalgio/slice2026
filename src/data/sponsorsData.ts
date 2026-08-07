@@ -14,16 +14,6 @@ export const SPONSORS_DATA: Sponsor[] = [
     thollai: true
   },
   {
-    id: 'eeci-gate-academy',
-    name: 'Eeci GATE',
-    tier: 'Proud Sponsor',
-    logoUrl: '/eecigate_logo.png',
-    websiteUrl: 'https://www.eecigate.in',
-    description: 'Eeci GATE, Established in the Year 2015, Known for “Best in Class” GATE ESE & PSUs courses and Top rated GATE ESE Institute in Chennai. Eeci GATE’s, Top Class Faculty Team (M Tech @ IISC / IITs), delivers Best in Class GATE ESE PSUs Courses.',
-    phone: ['+91 94870 72277'],
-    email: 'eecigate@gmail.com'
-  },
-  {
     id: 'sp-thaai-ladies-hostel',
     name: 'Thaai Ladies Hostel',
     tier: 'Proud Sponsor',
@@ -33,5 +23,15 @@ export const SPONSORS_DATA: Sponsor[] = [
     phone: ['Regina Francis: +91 99413 75862', 'Fathima Joseph: +91 97108 36760, +91 80985 63349'],
     email: 'thaaihostelchennai@gmail.com'
   },
+  {
+    id: 'eeci-gate-academy',
+    name: 'Eeci GATE',
+    tier: 'Proud Sponsor',
+    logoUrl: '/eecigate_logo.png',
+    websiteUrl: 'https://www.eecigate.in',
+    description: 'Eeci GATE, Established in the Year 2015, Known for “Best in Class” GATE ESE & PSUs courses and Top rated GATE ESE Institute in Chennai. Eeci GATE’s, Top Class Faculty Team (M Tech @ IISC / IITs), delivers Best in Class GATE ESE PSUs Courses.',
+    phone: ['+91 94870 72277'],
+    email: 'eecigate@gmail.com'
+  }
   
 ];
